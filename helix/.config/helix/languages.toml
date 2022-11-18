@@ -4,4 +4,4 @@ file-types = ["sh", "bash", "zsh", ".bash_login", ".bash_logout", ".bash_profile
 
 [[language]]
 name = "ruby"
-file-types = ["rb", "rake", "rakefile", "irb", "gemfile", "gemspec", "Rakefile", "Gemfile", "rabl", "jbuilder", "jb", "Podfile"]
+file-types = ["rb", "rake", "rakefile", "irb", "gemfile", "gemspec", "Rakefile", "Gemfile", "rabl", "jbuilder", "jb", "Podfile", "Brewfile"]
