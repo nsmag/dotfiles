@@ -1,0 +1,26 @@
+theme = "rose_pine_mod"
+
+[editor]
+mouse = false
+cursorline = true
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+
+[editor.whitespace.render]
+space = "all"
+tab = "all"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+
+[editor.indent-guides]
+render = true
+character = "╎"
+
+[keys.insert]
+j = { k = "normal_mode" }
