@@ -1,0 +1,23 @@
+[user]
+	name = Natthakit Susanthitanon
+	email = natthakit.susanthitanon@gmail.com
+[core]
+	pager = delta
+[delta]
+	navigate = true
+	side-by-side = true
+	syntax-theme = base16
+[diff]
+	colorMoved = default
+[interactive]
+	diffFilter = delta --color-only
+[merge]
+	conflictstyle = diff3
+[init]
+	defaultBranch = main
+[pull]
+	ff = only
+[alias]
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(magenta)%an%C(reset)%C(bold yellow)%d%C(reset)' --all
+[credential]
+	helper = osxkeychain
