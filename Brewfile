@@ -3,6 +3,7 @@ tap "homebrew/cask-fonts"
 # Tools
 brew "bat"
 brew "exa"
+brew "fd"
 brew "gh"
 brew "git"
 brew "git-delta"
