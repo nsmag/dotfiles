@@ -1,5 +1,5 @@
 ### Editor and locale
-export EDITOR="hx"
+export EDITOR="nvim"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
@@ -33,14 +33,20 @@ source "$ZSH/oh-my-zsh.sh"
 
 ### Aliases
 
-if [ "$(command -v exa)" ]; then
-  unalias -m 'ls'
-  alias ls='exa --icons -s type'
-fi
+unalias -m 'vi'
+alias vi="$EDITOR"
+
+unalias -m 'vim'
+alias vim="$EDITOR"
 
 if [ "$(command -v bat)" ]; then
   unalias -m 'cat'
   alias cat='bat -pp'
+fi
+
+if [ "$(command -v exa)" ]; then
+  unalias -m 'ls'
+  alias ls='exa --icons -s type'
 fi
 
 if [ "$(command -v kubectl)" ]; then
