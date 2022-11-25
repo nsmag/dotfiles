@@ -3,4 +3,6 @@
 ```bash
 ./setup.sh
 source ~/.zshrc
+
+# stow x
 ```
