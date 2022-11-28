@@ -31,6 +31,11 @@ if not typescript_setup then
 	return
 end
 
+local flutter_tools_setup, flutter_tools = pcall(require, "flutter-tools")
+if not flutter_tools_setup then
+	return
+end
+
 local keymap = vim.keymap
 
 local on_attach = function(client, bufnr)
@@ -103,6 +108,16 @@ end
 
 typescript.setup({
 	server = {
+		on_attach = on_attach,
+		capabilities = capabilities,
+	},
+})
+
+flutter_tools.setup({
+	lsp = {
+		color = {
+			enabled = true,
+		},
 		on_attach = on_attach,
 		capabilities = capabilities,
 	},
