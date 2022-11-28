@@ -3,7 +3,7 @@ local opt = vim.opt
 -- line numbers
 opt.number = true
 
--- tabs & indentation
+-- indentation
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.expandtab = true
@@ -20,6 +20,11 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+opt.listchars = {
+	tab = "  →",
+	trail = "·",
+}
+opt.list = true
 
 -- backspace
 opt.backspace = "indent,eol,start"
