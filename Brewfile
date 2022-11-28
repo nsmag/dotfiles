@@ -4,6 +4,7 @@ tap "homebrew/cask-fonts"
 brew "bat"
 brew "exa"
 brew "fd"
+cask "flutter"
 brew "gh"
 brew "git"
 brew "git-delta"
@@ -21,6 +22,7 @@ brew "zsh"
 cask "font-hack-nerd-font"
 
 # Apps
+cask "android-studio"
 cask "google-chrome"
 cask "kitty"
 mas "Twitter", id: 1482454543
