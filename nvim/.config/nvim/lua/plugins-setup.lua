@@ -79,6 +79,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 
+	use("L3MON4D3/LuaSnip")
+
 	use("williamboman/mason.nvim")
 	use("williamboman/mason-lspconfig.nvim")
 	use("neovim/nvim-lspconfig")
@@ -91,6 +93,13 @@ return packer.startup(function(use)
 	use("onsails/lspkind.nvim")
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
+
+	use({
+		"akinsho/flutter-tools.nvim",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+	})
 
 	use("gpanders/editorconfig.nvim")
 
