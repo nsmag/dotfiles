@@ -3,6 +3,11 @@ if not cmp_status then
 	return
 end
 
+local autopairs_status, autopairs = pcall(require, "nvim-autopairs")
+if not autopairs_status then
+	return
+end
+
 local luasnip_status, luasnip = pcall(require, "luasnip")
 if not luasnip_status then
 	return
@@ -14,6 +19,8 @@ if not lspkind_status then
 end
 
 vim.opt.completeopt = "menu,menuone,noselect"
+
+autopairs.setup()
 
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
@@ -43,3 +50,7 @@ cmp.setup({
 		}),
 	},
 })
+
+local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())

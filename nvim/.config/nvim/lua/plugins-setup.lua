@@ -79,6 +79,8 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-buffer")
 	use("hrsh7th/cmp-path")
 
+	use("windwp/nvim-autopairs")
+
 	use("L3MON4D3/LuaSnip")
 
 	use("williamboman/mason.nvim")
