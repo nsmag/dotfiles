@@ -8,8 +8,12 @@ export PATH="/usr/local/sbin:$PATH"
 
 if [ -d "/usr/local/opt/ruby/bin" ]; then
   export PATH="/usr/local/opt/ruby/bin:$PATH"
-  export PATH="`gem environment gemhome`/bin:$PATH"
-  export PATH="`gem environment user_gemhome`/bin:$PATH"
+  export PATH="$(gem environment gemhome)/bin:$PATH"
+  export PATH="$(gem environment user_gemhome)/bin:$PATH"
+fi
+
+if [ -x "$(command -v go)" ]; then
+  export PATH="$(go env GOPATH)/bin:$PATH"
 fi
 
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
