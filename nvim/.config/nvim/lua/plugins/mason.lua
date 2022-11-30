@@ -40,7 +40,6 @@ mason_null_ls.setup({
 		"stylua", -- lua
 		"taplo", -- toml
 		"yamlfmt", -- yaml
-		"yamllint", -- yaml
 	},
 	automatic_installation = true,
 })

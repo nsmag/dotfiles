@@ -148,7 +148,6 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.taplo,
 		formatting.yamlfmt,
-		diagnostics.yamllint,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)
