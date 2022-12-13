@@ -24,7 +24,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/
 # Download zsh-syntax-highlighting
 git clone https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
 
-# Stow zsh
+# Stow
+stow git
+stow kitty
+stow nvim
+
 ZSHRC="$HOME/.zshrc"
 
 if [ -f "$ZSHRC" ]; then

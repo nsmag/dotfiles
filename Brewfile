@@ -1,29 +1,28 @@
+# Taps & Installers
 tap "homebrew/cask-fonts"
+brew "mas"
+
+# Fonts
+cask "font-hack-nerd-font"
 
 # Tools
 brew "bat"
 brew "exa"
 brew "fd"
-cask "flutter"
 brew "gh"
 brew "git"
 brew "git-delta"
 brew "gnupg"
 cask "google-cloud-sdk"
-brew "helix"
 brew "jq"
-brew "mas"
+brew "n"
+brew "neovim"
 brew "ripgrep"
 brew "stow"
 brew "tre-command"
 brew "zsh"
 
-# Fonts
-cask "font-hack-nerd-font"
-
 # Apps
-cask "android-studio"
+cash "brave-browser"
 cask "google-chrome"
 cask "kitty"
-mas "Twitter", id: 1482454543
-mas "Xcode", id: 497799835
