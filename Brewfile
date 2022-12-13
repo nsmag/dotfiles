@@ -24,6 +24,6 @@ brew "tre-command"
 brew "zsh"
 
 # Apps
-cash "brave-browser"
+cask "brave-browser"
 cask "google-chrome"
 cask "kitty"
