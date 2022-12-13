@@ -2,7 +2,7 @@
 
 ```bash
 ./setup.sh
-source ~/.zshrc
 
-# stow x
+# For mobile development
+brew bundle --file=Brewfile-mobile
 ```
