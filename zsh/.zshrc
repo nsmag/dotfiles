@@ -35,8 +35,12 @@ zstyle ':omz:update' frequency 1
 
 source "$ZSH/oh-my-zsh.sh"
 
-### Aliases
+unsetopt autocd
 
+### fnm
+eval "$(fnm env --use-on-cd)"
+
+### Aliases
 unalias -m 'vi'
 alias vi="$EDITOR"
 
