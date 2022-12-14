@@ -6,12 +6,6 @@ export LC_ALL="en_US.UTF-8"
 ### PATH
 export PATH="/usr/local/sbin:$PATH"
 
-if [ -d "/usr/local/opt/ruby/bin" ]; then
-  export PATH="/usr/local/opt/ruby/bin:$PATH"
-  export PATH="$(gem environment gemhome)/bin:$PATH"
-  export PATH="$(gem environment user_gemhome)/bin:$PATH"
-fi
-
 if [ -x "$(command -v go)" ]; then
   export PATH="$(go env GOPATH)/bin:$PATH"
 fi
@@ -36,6 +30,12 @@ zstyle ':omz:update' frequency 1
 source "$ZSH/oh-my-zsh.sh"
 
 unsetopt autocd
+
+### Ruby
+if [ -d "/usr/local/opt/chruby/share/chruby" ]; then
+  source "/usr/local/opt/chruby/share/chruby/chruby.sh"
+  source "/usr/local/opt/chruby/share/chruby/auto.sh"
+fi
 
 ### fnm
 eval "$(fnm env --use-on-cd)"
