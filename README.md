@@ -8,6 +8,7 @@ brew bundle --file=Brewfile-mobile
 
 # Ruby
 ruby-install ruby
-chruby [ruby-version] # need to restart a shell
+echo "ruby-[version]" > ~/.ruby-version
+# Reload a shell to use the installed ruby
 gem install bundler
 ```
