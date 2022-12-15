@@ -28,5 +28,6 @@ brew "zsh"
 # Apps
 cask "brave-browser"
 cask "google-chrome"
+cask "imageoptim"
 cask "kitty"
 cask "slack"
