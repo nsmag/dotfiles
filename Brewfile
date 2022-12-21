@@ -23,10 +23,12 @@ brew "ripgrep"
 brew "ruby-install"
 brew "stow"
 brew "tre-command"
+brew "yq"
 brew "zsh"
 
 # Apps
 cask "brave-browser"
+cask "docker"
 cask "google-chrome"
 cask "imageoptim"
 cask "kitty"
