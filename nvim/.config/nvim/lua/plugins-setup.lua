@@ -30,10 +30,9 @@ return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	use({
-		"rose-pine/neovim",
-		as = "rose-pine",
+		"folke/tokyonight.nvim",
 		config = function()
-			vim.cmd("colorscheme rose-pine")
+			vim.cmd("colorscheme tokyonight-night")
 		end,
 	})
 
