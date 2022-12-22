@@ -28,6 +28,7 @@ brew "zsh"
 
 # Apps
 cask "brave-browser"
+cask "cloudflare-warp"
 cask "docker"
 cask "google-chrome"
 cask "imageoptim"
