@@ -37,8 +37,15 @@ if [ -d "/usr/local/opt/chruby/share/chruby" ]; then
   source "/usr/local/opt/chruby/share/chruby/auto.sh"
 fi
 
+### Flutter
+if [ -x "flutter" ]; then
+  eval "$(flutter bash-completion)"
+fi
+
 ### fnm
-eval "$(fnm env --use-on-cd)"
+if [ -x "fnm" ]; then
+  eval "$(fnm env --use-on-cd)"
+fi
 
 ### Aliases
 unalias -m 'vi'
