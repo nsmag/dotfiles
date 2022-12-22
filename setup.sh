@@ -9,6 +9,9 @@ cd $BASEDIR
 # Install things in Brewfile
 brew bundle
 
+# Install node
+fnm install --lts
+
 # Install oh-my-zsh
 /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
