@@ -1,0 +1,7 @@
+layouts:
+  - fullscreen
+  - column
+window-margins: true
+window-margin-size: 8
+mouse-swaps-windows: true
+mouse-resizes-windows: true
