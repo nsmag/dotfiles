@@ -8,4 +8,5 @@ mouse-resizes-windows: true
 floating:
   - com.apple.finder
   - com.apple.systempreferences
+  - com.apple.iphonesimulator
   - net.pornel.ImageOptim
