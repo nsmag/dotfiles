@@ -1,43 +1,30 @@
-local saga_status, saga = pcall(require, "lspsaga")
-if not saga_status then
-	return
+local saga_ok, saga = pcall(require, "lspsaga")
+
+if saga_ok and saga then
+	saga.init_lsp_saga({
+		move_in_saga = {
+			next = "<C-j>",
+			prev = "<C-k>",
+		},
+		finder_action_keys = {
+			open = "<CR>",
+		},
+		definition_action_keys = {
+			edit = "<CR>",
+		},
+	})
 end
 
-saga.init_lsp_saga({
-	move_in_saga = {
-		next = "<C-j>",
-		prev = "<C-k>",
-	},
-	finder_action_keys = {
-		open = "<CR>",
-	},
-	definition_action_keys = {
-		edit = "<CR>",
-	},
-})
+local lspconfig_ok, lspconfig = pcall(require, "lspconfig")
+local cmp_nvim_lsp_ok, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
+local typescript_ok, typescript = pcall(require, "typescript")
+local flutter_tools_ok, flutter_tools = pcall(require, "flutter-tools")
 
-local lspconfig_status, lspconfig = pcall(require, "lspconfig")
-if not lspconfig_status then
-	return
-end
-
-local cmp_nvim_lsp_status, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if not cmp_nvim_lsp_status then
-	return
-end
-
-local typescript_setup, typescript = pcall(require, "typescript")
-if not typescript_setup then
-	return
-end
-
-local flutter_tools_setup, flutter_tools = pcall(require, "flutter-tools")
-if not flutter_tools_setup then
+if not (lspconfig_ok and cmp_nvim_lsp_ok and typescript_ok and flutter_tools_ok) then
 	return
 end
 
 local keymap = vim.keymap
-
 local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
@@ -60,7 +47,6 @@ local on_attach = function(client, bufnr)
 		keymap.set("n", "<leader>ru", ":TypescriptRemoveUnused<CR>") -- remove unused variables
 	end
 end
-
 local capabilities = cmp_nvim_lsp.default_capabilities()
 
 -- servers

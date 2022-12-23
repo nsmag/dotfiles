@@ -20,11 +20,11 @@ opt.smartcase = true
 opt.termguicolors = true
 opt.background = "dark"
 opt.signcolumn = "yes"
+opt.list = true
 opt.listchars = {
 	tab = "  →",
 	trail = "·",
 }
-opt.list = true
 
 -- backspace
 opt.backspace = "indent,eol,start"
@@ -38,3 +38,6 @@ opt.splitbelow = true
 
 -- keywords
 opt.iskeyword:append("-")
+
+-- complete
+opt.completeopt = "menu,menuone,noselect"

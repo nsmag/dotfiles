@@ -1,24 +1,11 @@
-local cmp_status, cmp = pcall(require, "cmp")
-if not cmp_status then
+local cmp_ok, cmp = pcall(require, "cmp")
+local autopairs_ok, autopairs = pcall(require, "nvim-autopairs")
+local luasnip_ok, luasnip = pcall(require, "luasnip")
+local lspkind_ok, lspkind = pcall(require, "lspkind")
+
+if not (cmp_ok and autopairs_ok and luasnip_ok and lspkind_ok) then
 	return
 end
-
-local autopairs_status, autopairs = pcall(require, "nvim-autopairs")
-if not autopairs_status then
-	return
-end
-
-local luasnip_status, luasnip = pcall(require, "luasnip")
-if not luasnip_status then
-	return
-end
-
-local lspkind_status, lspkind = pcall(require, "lspkind")
-if not lspkind_status then
-	return
-end
-
-vim.opt.completeopt = "menu,menuone,noselect"
 
 autopairs.setup({
 	check_ts = true,
