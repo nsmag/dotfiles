@@ -5,3 +5,7 @@ window-margins: true
 window-margin-size: 8
 mouse-swaps-windows: true
 mouse-resizes-windows: true
+floating:
+  - com.apple.finder
+  - com.apple.systempreferences
+  - net.pornel.ImageOptim
