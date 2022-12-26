@@ -110,6 +110,7 @@ return ok
 			end,
 		})
 		use("gpanders/editorconfig.nvim")
+		use("numToStr/FTerm.nvim")
 
 		if packer_bootstrap then
 			require("packer").sync()

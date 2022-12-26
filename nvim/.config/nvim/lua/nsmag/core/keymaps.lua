@@ -14,8 +14,11 @@ keymap.set("n", "<leader>t[", ":tabp<CR>")
 -- plugins
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
-keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
-keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
-keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
-keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+keymap.set("n", "<leader>ff", "<CMD>Telescope find_files<CR>")
+keymap.set("n", "<leader>fs", "<CMD>Telescope live_grep<CR>")
+keymap.set("n", "<leader>fc", "<CMD>Telescope grep_string<CR>")
+keymap.set("n", "<leader>fb", "<CMD>Telescope buffers<CR>")
+keymap.set("n", "<leader>fh", "<CMD>Telescope help_tags<CR>")
+
+keymap.set("n", "<leader>i", "<CMD>lua require('FTerm').toggle()<CR>")
+keymap.set("t", "<leader>i", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>")
