@@ -10,13 +10,16 @@ keymap.set("n", "<leader>tn", ":tabnew<CR>")
 keymap.set("n", "<leader>tc", ":tabclose<CR>")
 keymap.set("n", "<leader>t]", ":tabn<CR>")
 keymap.set("n", "<leader>t[", ":tabp<CR>")
+keymap.set("i", "<C-h>", "<left>")
+keymap.set("i", "<C-j>", "<down>")
+keymap.set("i", "<C-k>", "<up>")
+keymap.set("i", "<C-l>", "<right>")
 
 -- plugins
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
 
 keymap.set("n", "<leader>ff", "<CMD>Telescope find_files<CR>")
 keymap.set("n", "<leader>fs", "<CMD>Telescope live_grep<CR>")
-keymap.set("n", "<leader>fc", "<CMD>Telescope grep_string<CR>")
 keymap.set("n", "<leader>fb", "<CMD>Telescope buffers<CR>")
 keymap.set("n", "<leader>fh", "<CMD>Telescope help_tags<CR>")
 
