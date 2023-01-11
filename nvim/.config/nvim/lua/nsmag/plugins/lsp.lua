@@ -12,6 +12,9 @@ if saga_ok and saga then
 		definition_action_keys = {
 			edit = "<CR>",
 		},
+		code_action_lightbulb = {
+			virtual_text = false,
+		},
 	})
 end
 
