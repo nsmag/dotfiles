@@ -1,8 +1,8 @@
 layouts:
   - fullscreen
-  - column
 window-margins: true
 window-margin-size: 8
+smart-window-margins: true
 mouse-swaps-windows: true
 mouse-resizes-windows: true
 floating:
