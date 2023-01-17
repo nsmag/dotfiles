@@ -70,6 +70,7 @@ local servers = {
 		gofumpt = true,
 	},
 	html = {},
+	jsonls = {},
 	sumneko_lua = {
 		settings = {
 			Lua = {
@@ -128,6 +129,7 @@ null_ls.setup({
 		formatting.dart_format,
 		diagnostics.hadolint,
 		formatting.gofumpt,
+		formatting.jq,
 		formatting.prettier,
 		diagnostics.eslint_d.with({
 			condition = function(utils)

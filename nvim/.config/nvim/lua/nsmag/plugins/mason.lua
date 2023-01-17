@@ -14,6 +14,7 @@ if ok2 and mason_lspconfig then
 			"gopls", -- go
 			"html", -- html
 			"tsserver", -- js, ts
+			"jsonls",
 			"sumneko_lua", -- lua
 			"rust_analyzer", -- rust
 			"taplo", -- toml
@@ -33,6 +34,7 @@ if ok3 and mason_null_ls then
 			"gofumpt", -- go
 			"prettier", -- js, ts, css, html
 			"eslint_d", -- js, ts
+			"jq", -- json
 			"stylua", -- lua
 			"taplo", -- toml
 			"yamlfmt", -- yaml
