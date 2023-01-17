@@ -38,14 +38,10 @@ if [ -d "/usr/local/opt/chruby/share/chruby" ]; then
 fi
 
 ### Flutter
-if [ -x "flutter" ]; then
-  eval "$(flutter bash-completion)"
-fi
+eval "$(flutter bash-completion)"
 
 ### fnm
-if [ -x "fnm" ]; then
-  eval "$(fnm env --use-on-cd)"
-fi
+eval "$(fnm env --use-on-cd)"
 
 ### Aliases
 unalias -m 'vi'
