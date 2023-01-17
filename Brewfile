@@ -27,11 +27,11 @@ brew "yq"
 brew "zsh"
 
 # Apps
-cask "amethyst"
 cask "brave-browser"
 cask "cloudflare-warp"
 cask "docker"
 cask "google-chrome"
 cask "imageoptim"
 cask "kitty"
+cask "rectangle"
 cask "slack"
