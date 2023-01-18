@@ -1,18 +1,12 @@
 local saga_ok, saga = pcall(require, "lspsaga")
 
 if saga_ok and saga then
-	saga.init_lsp_saga({
-		move_in_saga = {
-			next = "<C-j>",
-			prev = "<C-k>",
+	saga.setup({
+		scroll_preview = {
+			scroll_down = "<C-j>",
+			scroll_up = "<C-k>",
 		},
-		finder_action_keys = {
-			open = "<CR>",
-		},
-		definition_action_keys = {
-			edit = "<CR>",
-		},
-		code_action_lightbulb = {
+		lightbulb = {
 			virtual_text = false,
 		},
 	})

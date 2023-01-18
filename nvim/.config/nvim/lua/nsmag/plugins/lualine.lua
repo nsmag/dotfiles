@@ -13,5 +13,15 @@ if ok and lualine then
 				right = "",
 			},
 		},
+		sections = {
+			lualine_b = {
+				{
+					"branch",
+					icon = { "" },
+				},
+				"diff",
+				"diagnostics",
+			},
+		},
 	})
 end
