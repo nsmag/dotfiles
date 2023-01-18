@@ -21,10 +21,13 @@ brew "jq"
 brew "neovim"
 brew "ripgrep"
 brew "ruby-install"
+brew "starship"
 brew "stow"
 brew "tre-command"
 brew "yq"
 brew "zsh"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
 
 # Apps
 cask "brave-browser"

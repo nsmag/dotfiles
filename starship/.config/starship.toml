@@ -1,0 +1,20 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = '$directory$git_branch$git_status$character'
+
+[character]
+success_symbol = '[\$](bold)'
+error_symbol = '[\$](bold red)'
+
+[directory]
+style = 'bold blue'
+read_only = '\uf023'
+read_only_style = 'bold blue'
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+symbol = "\ue725 "
+style = 'bold purple'
+
+[git_status]
+style = 'bold purple'
