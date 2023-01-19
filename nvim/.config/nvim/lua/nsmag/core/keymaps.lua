@@ -24,4 +24,4 @@ keymap.set("n", "<leader>fb", "<CMD>Telescope buffers<CR>")
 keymap.set("n", "<leader>fh", "<CMD>Telescope help_tags<CR>")
 
 keymap.set("n", "<leader>i", "<CMD>lua require('FTerm').toggle()<CR>")
-keymap.set("t", "<leader>i", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>")
+keymap.set("t", "<ESC>", "<C-\\><C-n><CMD>lua require('FTerm').toggle()<CR>")
