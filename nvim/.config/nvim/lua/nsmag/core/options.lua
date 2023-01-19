@@ -2,6 +2,10 @@ local opt = vim.opt
 
 -- line numbers
 opt.number = true
+opt.relativenumber = true
+
+-- scroll
+opt.scrolloff = 8
 
 -- indentation
 opt.tabstop = 2
