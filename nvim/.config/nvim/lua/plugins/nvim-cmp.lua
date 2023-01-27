@@ -13,8 +13,8 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({
-        ["<tab>"] = cmp.mapping.select_next_item(),
-        ["<s-tab>"] = cmp.mapping.select_prev_item(),
+        ["<c-j>"] = cmp.mapping.select_next_item(),
+        ["<c-k>"] = cmp.mapping.select_prev_item(),
         ["<c-u>"] = cmp.mapping.scroll_docs(-4),
         ["<c-d>"] = cmp.mapping.scroll_docs(4),
         ["<c-space>"] = cmp.mapping.complete(),
