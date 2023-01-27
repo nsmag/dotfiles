@@ -7,7 +7,7 @@ return {
         sources = {
           nls.builtins.formatting.gofumpt,
           nls.builtins.formatting.jq,
-          nls.builtins.formatting.prettierd,
+          nls.builtins.formatting.prettier,
           nls.builtins.formatting.stylua,
           nls.builtins.formatting.taplo,
           nls.builtins.formatting.yamlfmt,
