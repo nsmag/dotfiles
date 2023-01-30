@@ -10,6 +10,7 @@ return {
           nls.builtins.formatting.prettier,
           nls.builtins.formatting.stylua,
           nls.builtins.formatting.taplo,
+          nls.builtins.formatting.xmllint,
           nls.builtins.formatting.yamlfmt,
         },
       }
