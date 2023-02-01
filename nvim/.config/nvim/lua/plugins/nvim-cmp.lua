@@ -12,15 +12,16 @@ return {
           require("luasnip").lsp_expand(args.body)
         end,
       },
-      mapping = cmp.mapping.preset.insert({
+      mapping = {
         ["<c-j>"] = cmp.mapping.select_next_item(),
         ["<c-k>"] = cmp.mapping.select_prev_item(),
         ["<c-u>"] = cmp.mapping.scroll_docs(-4),
         ["<c-d>"] = cmp.mapping.scroll_docs(4),
         ["<c-space>"] = cmp.mapping.complete(),
         ["<c-c>"] = cmp.mapping.abort(),
-        ["<cr>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-      }),
+        ["<cr>"] = cmp.mapping.confirm({ select = false }),
+        ["<c-cr>"] = cmp.mapping.confirm({ select = false }),
+      },
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "luasnip" },
