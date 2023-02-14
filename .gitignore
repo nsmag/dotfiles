@@ -3,3 +3,4 @@ Brewfile*.lock.json
 *.zwc
 
 packer_compiled.lua
+lazy-lock.json
