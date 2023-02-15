@@ -11,6 +11,7 @@ return {
         "eslint_d",
         "gofumpt",
         "gopls",
+        "gradle-language-server",
         "hadolint",
         "html-lsp",
         "jq",
