@@ -34,6 +34,7 @@ brew "zsh-syntax-highlighting"
 # Apps
 cask "brave-browser"
 cask "cloudflare-warp"
+cask "discord"
 cask "docker"
 cask "google-chrome"
 cask "imageoptim"
