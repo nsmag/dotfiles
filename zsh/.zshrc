@@ -8,6 +8,7 @@ eval "$(brew shellenv)"
 
 ### Path
 export PATH="$(go env GOPATH)/bin:$PATH"
+export PATH="$HOME/.pub-cache/bin:$PATH"
 
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
 
@@ -16,6 +17,9 @@ if [ -d "/usr/local/opt/chruby/share/chruby" ]; then
   source "/usr/local/opt/chruby/share/chruby/chruby.sh"
   source "/usr/local/opt/chruby/share/chruby/auto.sh"
 fi
+
+### gh
+eval "$(gh completion -s zsh)"
 
 ### Flutter
 eval "$(flutter bash-completion)"
