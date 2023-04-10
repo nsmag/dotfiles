@@ -31,18 +31,11 @@ return {
       automatic_installation = true,
       automatic_setup = true,
     },
-    config = function(plugin, opts)
+    config = function(_, opts)
       require("mason-null-ls").setup(opts)
-      require("mason-null-ls").setup_handlers()
     end,
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    -- opts = function()
-    --   local nls = require("null-ls")
-    --   return {
-    --     sources = {},
-    --   }
-    -- end,
   },
 }
