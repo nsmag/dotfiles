@@ -7,7 +7,6 @@ return {
     opts = {
       ensure_installed = {
         "css-lsp",
-        "dockerfile-language-server",
         "eslint_d",
         "gofumpt",
         "gopls",
@@ -16,9 +15,8 @@ return {
         "html-lsp",
         "jq",
         "json-lsp",
-        "kotlin-language-server",
         "lua-language-server",
-        "prettier",
+        "prettierd",
         "rust-analyzer",
         "stylua",
         "tailwindcss-language-server",
