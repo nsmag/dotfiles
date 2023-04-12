@@ -23,7 +23,6 @@ return {
         "taplo",
         "typescript-language-server",
         "xmlformatter",
-        "yaml-language-server",
         "yamlfmt",
       },
       automatic_installation = true,
