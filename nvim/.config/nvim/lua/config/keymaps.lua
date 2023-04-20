@@ -24,3 +24,11 @@ map("i", "<c-h>", "<left>")
 map("i", "<c-j>", "<down>")
 map("i", "<c-k>", "<up>")
 map("i", "<c-l>", "<right>")
+
+-- nvim-tmux-navigation
+map("n", "<c-h>", "<cmd>NvimTmuxNavigateLeft<cr>")
+map("n", "<c-j>", "<cmd>NvimTmuxNavigateDown<cr>")
+map("n", "<c-k>", "<cmd>NvimTmuxNavigateUp<cr>")
+map("n", "<c-l>", "<cmd>NvimTmuxNavigateRight<cr>")
+map("n", "<c-\\>", "<cmd>NvimTmuxNavigateLastActive<cr>")
+map("n", "<c-space>", "<cmd>NvimTmuxNavigateNext<cr>")
