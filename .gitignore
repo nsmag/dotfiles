@@ -4,3 +4,5 @@ Brewfile*.lock.json
 
 packer_compiled.lua
 lazy-lock.json
+
+tmux/.tmux/
