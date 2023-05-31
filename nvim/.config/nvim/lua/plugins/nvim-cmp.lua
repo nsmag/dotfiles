@@ -1,8 +1,14 @@
 return {
   {
     "hrsh7th/nvim-cmp",
+    dependencies = {
+      { "onsails/lspkind.nvim" },
+      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
+    },
     opts = function()
       local cmp = require("cmp")
+      local lspkind = require("lspkind")
+      local tailwindcss_colorizer_cmp = require("tailwindcss-colorizer-cmp")
 
       return {
         completion = {
@@ -30,13 +36,10 @@ return {
           { name = "path" },
         }),
         formatting = {
-          format = function(_, item)
-            local icons = require("lazyvim.config").icons.kinds
-            if icons[item.kind] then
-              item.kind = icons[item.kind] .. item.kind
-            end
-            return item
-          end,
+          format = lspkind.cmp_format({
+            mode = "symbol_text",
+            before = tailwindcss_colorizer_cmp.formatter,
+          }),
         },
       }
     end,
