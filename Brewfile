@@ -7,6 +7,7 @@ cask "font-hack-nerd-font"
 
 # Tools
 brew "bat"
+brew "bottom"
 brew "chruby"
 brew "cmake"
 brew "exa"
