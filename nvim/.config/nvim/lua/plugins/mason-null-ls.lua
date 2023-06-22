@@ -6,6 +6,7 @@ return {
     "jay-babu/mason-null-ls.nvim",
     opts = {
       ensure_installed = {
+        "astro-language-server",
         "css-lsp",
         "eslint_d",
         "gofumpt",

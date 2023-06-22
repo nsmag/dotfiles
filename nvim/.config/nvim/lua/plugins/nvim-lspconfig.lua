@@ -4,6 +4,25 @@ return {
     dependencies = { "jose-elias-alvarez/typescript.nvim" },
     opts = {
       servers = {
+        cssls = {
+          settings = {
+            css = {
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+            less = {
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+            scss = {
+              lint = {
+                unknownAtRules = "ignore",
+              },
+            },
+          },
+        },
         tailwindcss = {
           filetypes_exclude = { "markdown" },
         },
