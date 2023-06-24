@@ -18,6 +18,7 @@ return {
         "json-lsp",
         "lua-language-server",
         "prettierd",
+        "prisma-language-server",
         "rust-analyzer",
         "stylua",
         "tailwindcss-language-server",

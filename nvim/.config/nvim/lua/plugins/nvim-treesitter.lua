@@ -12,6 +12,7 @@ return {
         "json",
         "lua",
         "make",
+        "prisma",
         "python",
         "regex",
         "rust",
