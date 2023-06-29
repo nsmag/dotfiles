@@ -16,6 +16,7 @@ fnm install --lts
 # Stow
 stow bat
 stow git
+stow karabiner
 stow kitty
 stow nvim
 stow starship
