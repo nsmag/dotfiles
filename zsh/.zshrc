@@ -49,6 +49,11 @@ if [ -d "$HOMEBREW_PREFIX/share/google-cloud-sdk" ]; then
   source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
+### Kubectl
+if [ "$(command -v kubectl)" ]; then
+  source <(kubectl completion zsh)
+fi
+
 ### Aliases
 unalias -m 'vi'
 alias vi="$EDITOR"
