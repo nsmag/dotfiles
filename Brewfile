@@ -1,5 +1,6 @@
 # Taps & Installers
 tap "homebrew/cask-fonts"
+tap "hashicorp/tap"
 brew "mas"
 
 # Fonts
@@ -27,6 +28,7 @@ brew "ripgrep"
 brew "ruby-install"
 brew "starship"
 brew "stow"
+brew "hashicorp/tap/terraform"
 brew "tmux"
 brew "tre-command"
 brew "yq"

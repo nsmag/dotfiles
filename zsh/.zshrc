@@ -54,6 +54,12 @@ if [ "$(command -v kubectl)" ]; then
   source <(kubectl completion zsh)
 fi
 
+### Terraform
+if [ "$(command -v terraform)" ]; then
+  autoload -U +X bashcompinit && bashcompinit
+  complete -o nospace -C "$HOMEBREW_PREFIX/bin/terraform" terraform
+fi
+
 ### Aliases
 unalias -m 'vi'
 alias vi="$EDITOR"
@@ -75,5 +81,3 @@ if [ "$(command -v kubectl)" ]; then
   unalias -m 'k'
   alias k='kubectl'
 fi
-
-
