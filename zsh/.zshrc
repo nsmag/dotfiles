@@ -3,6 +3,11 @@ export EDITOR="nvim"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
+### Completion
+autoload -Uz compinit bashcompinit
+compinit
+bashcompinit
+
 ### Path
 export PATH="$(go env GOPATH)/bin:$PATH"
 export PATH="$HOME/.pub-cache/bin:$PATH"
@@ -19,17 +24,17 @@ fi
 
 ### gh
 if [ "$(command -v gh)" ]; then
-  eval "$(gh completion -s zsh)"
+  source <(gh completion -s zsh)
 fi
 
 ### Flutter
 if [ "$(command -v flutter)" ]; then
-  eval "$(flutter bash-completion)"
+  source <(flutter bash-completion)
 fi
 
 ### FNM
 if [ "$(command -v fnm)" ]; then
-  eval "$(fnm env --use-on-cd)"
+  source <(fnm env --use-on-cd)
 fi
 
 ### Ruby
@@ -40,13 +45,19 @@ fi
 
 ### Starship
 if [ "$(command -v starship)" ]; then
-  eval "$(starship init zsh)"
+  source <(starship init zsh --print-full-init)
 fi
 
 ### Google Cloud SDK
 if [ -d "$HOMEBREW_PREFIX/share/google-cloud-sdk" ]; then
   source "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
   source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
+fi
+
+### Colima
+if [ "$(command -v colima)" ]; then
+  # Not sure why this is not working
+  source <(colima completion zsh)
 fi
 
 ### Kubectl
@@ -56,7 +67,6 @@ fi
 
 ### Terraform
 if [ "$(command -v terraform)" ]; then
-  autoload -U +X bashcompinit && bashcompinit
   complete -o nospace -C "$HOMEBREW_PREFIX/bin/terraform" terraform
 fi
 
