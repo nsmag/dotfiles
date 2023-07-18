@@ -13,6 +13,7 @@ return {
         "lua",
         "make",
         "markdown",
+        "markdown_inline",
         "prisma",
         "python",
         "regex",
