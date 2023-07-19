@@ -1,93 +1,79 @@
-### Editor and locale
 export EDITOR="nvim"
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
-### Completion
+autoload colors
+colors
+
+if [ ! "$(command -v brew)" ]; then
+  echo "$fg[yellow][WARN]$fg[default] brew is not installed, the rest of the .zshrc will not be executed"
+  return
+fi
+
+### completion
+FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
 autoload -Uz compinit bashcompinit
 compinit
 bashcompinit
 
-### Path
-export PATH="$(go env GOPATH)/bin:$PATH"
+### PATH
 export PATH="$HOME/.pub-cache/bin:$PATH"
 
-### ZSH Autosuggestions
-if [ -d "$HOMEBREW_PREFIX/share/zsh-autosuggestions" ]; then
-  source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+### zsh-autosuggestions
+if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
+  source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
 fi
 
-### ZSH Syntax highlighting
-if [ -d "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting" ]; then
-  source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+### zsh-syntax-highlighting
+if [ -f "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+  source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 fi
 
-### gh
-if [ "$(command -v gh)" ]; then
-  source <(gh completion -s zsh)
-fi
-
-### Flutter
-if [ "$(command -v flutter)" ]; then
-  source <(flutter bash-completion)
-fi
-
-### FNM
-if [ "$(command -v fnm)" ]; then
-  source <(fnm env --use-on-cd)
-fi
-
-### Ruby
-if [ -d "$HOMEBREW_PREFIX/opt/chruby/share/chruby" ]; then
-  source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh"
-  source "$HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh"
-fi
-
-### Starship
+### starship
 if [ "$(command -v starship)" ]; then
   source <(starship init zsh --print-full-init)
 fi
 
-### Google Cloud SDK
-if [ -d "$HOMEBREW_PREFIX/share/google-cloud-sdk" ]; then
-  source "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
-  source "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
+### rtx
+if [ "$(command -v rtx)" ]; then
+  source <(rtx activate zsh)
+  source <(rtx completion zsh)
 fi
 
-### Colima
-if [ "$(command -v colima)" ]; then
-  # Not sure why this is not working
-  source <(colima completion zsh)
+### flutter
+if [ "$(command -v flutter)" ]; then
+  source <(flutter bash-completion)
 fi
 
-### Kubectl
-if [ "$(command -v kubectl)" ]; then
-  source <(kubectl completion zsh)
+### google-cloud-sdk
+if [ -d "$(brew --prefix)/share/google-cloud-sdk" ]; then
+  source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+  source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
-### Terraform
+### terraform
 if [ "$(command -v terraform)" ]; then
-  complete -o nospace -C "$HOMEBREW_PREFIX/bin/terraform" terraform
+  complete -o nospace -C "$(brew --prefix)/bin/terraform" terraform
 fi
 
 ### Aliases
-unalias -m 'vi'
+unalias -m "vi"
 alias vi="$EDITOR"
 
-unalias -m 'vim'
+unalias -m "vim"
 alias vim="$EDITOR"
 
 if [ "$(command -v bat)" ]; then
-  unalias -m 'cat'
+  unalias -m "cat"
   alias cat='bat -pp'
 fi
 
 if [ "$(command -v exa)" ]; then
-  unalias -m 'ls'
+  unalias -m "ls"
   alias ls='exa --icons -s type'
 fi
 
 if [ "$(command -v kubectl)" ]; then
-  unalias -m 'k'
+  unalias -m "k"
   alias k='kubectl'
 fi

@@ -1,0 +1,4 @@
+[tools]
+golang = '1.20'
+node = 'lts'
+ruby = '3.2'

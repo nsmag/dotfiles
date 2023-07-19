@@ -10,15 +10,17 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Install things in Brewfile
 brew bundle
 
-# Install node
-fnm install --lts
-
 # Stow
 stow bat
 stow git
 stow karabiner
 stow kitty
 stow nvim
+stow rtx
 stow starship
 stow tmux
 stow zsh
+
+# Install tools via rtx
+source <(rtx activate zsh)
+rtx install
