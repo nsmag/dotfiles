@@ -68,6 +68,11 @@ if [ "$(command -v bat)" ]; then
   alias cat='bat -pp'
 fi
 
+if [ "$(command -v dust)" ]; then
+  unalias -m "du"
+  alias du='dust'
+fi
+
 if [ "$(command -v exa)" ]; then
   unalias -m "ls"
   alias ls='exa --icons -s type'
