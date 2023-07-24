@@ -8,7 +8,6 @@ return {
       ensure_installed = {
         "astro-language-server",
         "css-lsp",
-        "eslint_d",
         "gofumpt",
         "gopls",
         "gradle-language-server",
@@ -17,11 +16,10 @@ return {
         "jq",
         "json-lsp",
         "lua-language-server",
-        "prettierd",
         "prisma-language-server",
-        "rust-analyzer",
         "stylua",
         "tailwindcss-language-server",
+        "rust-analyzer",
         "taplo",
         "typescript-language-server",
         "xmlformatter",
@@ -36,8 +34,5 @@ return {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    opts = function(_, opts)
-      table.insert(opts.sources, require("typescript.extensions.null-ls.code-actions"))
-    end,
   },
 }

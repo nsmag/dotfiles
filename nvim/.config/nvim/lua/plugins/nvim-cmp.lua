@@ -3,12 +3,12 @@ return {
     "hrsh7th/nvim-cmp",
     dependencies = {
       { "onsails/lspkind.nvim" },
-      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
+      { "js-everts/cmp-tailwind-colors" },
     },
     opts = function()
       local cmp = require("cmp")
       local lspkind = require("lspkind")
-      local tailwindcss_colorizer_cmp = require("tailwindcss-colorizer-cmp")
+      local cmp_tailwind_colors = require("cmp-tailwind-colors")
 
       return {
         completion = {
@@ -38,7 +38,7 @@ return {
         formatting = {
           format = lspkind.cmp_format({
             mode = "symbol_text",
-            before = tailwindcss_colorizer_cmp.formatter,
+            before = cmp_tailwind_colors.format,
           }),
         },
       }
