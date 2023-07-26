@@ -6,11 +6,9 @@ return {
     "jay-babu/mason-null-ls.nvim",
     opts = {
       ensure_installed = {
-        "astro-language-server",
         "css-lsp",
         "gofumpt",
         "gopls",
-        "gradle-language-server",
         "hadolint",
         "html-lsp",
         "jq",
@@ -19,7 +17,6 @@ return {
         "prisma-language-server",
         "stylua",
         "tailwindcss-language-server",
-        "rust-analyzer",
         "taplo",
         "typescript-language-server",
         "xmlformatter",

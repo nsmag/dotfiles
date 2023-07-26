@@ -22,9 +22,12 @@ return {
             },
           },
         },
+        html = {},
+        prismals = {},
         tailwindcss = {
           filetypes_exclude = { "markdown" },
         },
+        taplo = {},
       },
       setup = {
         tailwindcss = function(_, opts)
