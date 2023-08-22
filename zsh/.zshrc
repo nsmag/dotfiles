@@ -56,6 +56,10 @@ if [ "$(command -v terraform)" ]; then
   complete -o nospace -C "$(brew --prefix)/bin/terraform" terraform
 fi
 
+### tabtab for these tools
+# - pnpm
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+
 ### Aliases
 unalias -m "vi"
 alias vi="$EDITOR"
