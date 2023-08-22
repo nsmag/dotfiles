@@ -21,6 +21,9 @@ stow starship
 stow tmux
 stow zsh
 
+# Update submodule
+git submodule update --init --recursive
+
 # Install tools via rtx
 source <(rtx activate zsh)
 rtx install
