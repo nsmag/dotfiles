@@ -21,5 +21,8 @@ return {
         "yaml",
       },
     },
+    init = function()
+      vim.treesitter.language.register("markdown", "mdx")
+    end,
   },
 }
