@@ -26,6 +26,17 @@ return {
         prismals = {},
         tailwindcss = {
           filetypes_exclude = { "markdown" },
+          settings = {
+            tailwindCSS = {
+              experimental = {
+                classRegex = {
+                  { "clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                  { "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]" },
+                  { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                },
+              },
+            },
+          },
         },
         taplo = {},
       },
