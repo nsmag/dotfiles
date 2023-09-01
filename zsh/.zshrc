@@ -51,6 +51,11 @@ if [ -d "$(brew --prefix)/share/google-cloud-sdk" ]; then
   source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 fi
 
+### azure-cli
+if [ -f "$(brew --prefix)/etc/bash_completion.d/az" ]; then
+  source "$(brew --prefix)/etc/bash_completion.d/az"
+fi
+
 ### terraform
 if [ "$(command -v terraform)" ]; then
   complete -o nospace -C "$(brew --prefix)/bin/terraform" terraform
