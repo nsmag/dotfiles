@@ -14,6 +14,8 @@ return {
         "jq",
         "json-lsp",
         "lua-language-server",
+        "prettier",
+        "prettierd",
         "prisma-language-server",
         "stylua",
         "tailwindcss-language-server",
@@ -31,5 +33,21 @@ return {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
+    opts = function()
+      local null_ls = require("null-ls")
+
+      return {
+        sources = {
+          null_ls.builtins.formatting.prettier.with({
+            prefer_local = "node_modules/.bin",
+          }),
+          -- null_ls.builtins.formatting.prettierd.with({
+          --   env = {
+          --     PRETTIERD_LOCAL_PRETTIER_ONLY = true,
+          --   },
+          -- }),
+        },
+      }
+    end,
   },
 }
