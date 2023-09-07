@@ -82,9 +82,9 @@ if [ "$(command -v dust)" ]; then
   alias du='dust'
 fi
 
-if [ "$(command -v exa)" ]; then
+if [ "$(command -v eza)" ]; then
   unalias -m "ls"
-  alias ls='exa --icons -s type'
+  alias ls='eza --icons -s type'
 fi
 
 if [ "$(command -v kubectl)" ]; then
