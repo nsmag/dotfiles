@@ -44,4 +44,10 @@ return {
       }
     end,
   },
+  {
+    "js-everts/cmp-tailwind-colors",
+    opts = {
+      width = 1
+    }
+  },
 }

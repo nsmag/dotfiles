@@ -39,6 +39,7 @@ return {
       return {
         sources = {
           null_ls.builtins.formatting.prettier.with({
+            extra_filetypes = { "mdx" },
             prefer_local = "node_modules/.bin",
           }),
           -- null_ls.builtins.formatting.prettierd.with({
