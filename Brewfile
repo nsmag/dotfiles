@@ -45,10 +45,10 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 # Apps
+cask "arc"
 cask "brave-browser"
 cask "cloudflare-warp"
 cask "discord"
-cask "google-chrome"
 cask "imageoptim"
 brew "imageoptim-cli"
 cask "karabiner-elements"
