@@ -3,7 +3,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       format = {
-        timeout_ms = 2000
+        timeout_ms = 2000,
       },
       servers = {
         cssls = {
@@ -26,7 +26,6 @@ return {
           },
         },
         html = {},
-        prismals = {},
         tailwindcss = {
           filetypes_exclude = { "markdown" },
           settings = {
@@ -37,21 +36,17 @@ return {
                     "clsx\\(([^)]*)\\)",
                     "(?:'|\"|`)([^']*)(?:'|\"|`)",
                   },
-                  { "cva(?:\\<[^(]*)?\\(([^)]*)\\)",
+                  {
+                    "cva(?:\\<[^(]*)?\\(([^)]*)\\)",
                     "[\"'`]([^\"'`]*).*?[\"'`]",
                   },
-                  { "cx\\(([^)]*)\\)",
-                    "(?:'|\"|`)([^']*)(?:'|\"|`)",
-                  },
-                  { "toHaveClass\\(([^)]*)\\)",
-                    "(?:'|\"|`)([^']*)(?:'|\"|`)",
-                  },
+                  { "cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
+                  { "toHaveClass\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)" },
                 },
               },
             },
           },
         },
-        taplo = {},
       },
       setup = {
         tailwindcss = function(_, opts)
@@ -65,6 +60,7 @@ return {
     },
     init = function()
       local keys = require("lazyvim.plugins.lsp.keymaps").get()
+      -- prevent key conflict with nvim-cmp previous movement
       keys[#keys + 1] = { "<c-k>", false }
     end,
   },
