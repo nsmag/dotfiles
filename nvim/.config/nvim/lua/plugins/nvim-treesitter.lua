@@ -1,6 +1,9 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
+    dependencies = {
+      { "windwp/nvim-ts-autotag" },
+    },
     opts = {
       ensure_installed = {
         "astro",
@@ -19,6 +22,12 @@ return {
         "toml",
         "vim",
         "yaml",
+      },
+      autotag = {
+        enable = true,
+        enable_rename = true,
+        enable_close = true,
+        enable_close_on_slash = false,
       },
     },
     init = function()

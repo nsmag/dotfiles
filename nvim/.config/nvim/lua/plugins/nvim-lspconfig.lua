@@ -25,7 +25,6 @@ return {
             },
           },
         },
-        html = {},
         tailwindcss = {
           filetypes_exclude = { "markdown" },
           settings = {
