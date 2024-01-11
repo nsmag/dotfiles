@@ -34,10 +34,10 @@ if [ "$(command -v starship)" ]; then
   source <(starship init zsh --print-full-init)
 fi
 
-### rtx
-if [ "$(command -v rtx)" ]; then
-  source <(rtx activate zsh)
-  source <(rtx completion zsh)
+### mise
+if [ "$(command -v mise)" ]; then
+  source <(mise activate zsh)
+  source <(mise completion zsh)
 fi
 
 ### flutter

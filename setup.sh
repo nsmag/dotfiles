@@ -15,8 +15,8 @@ stow bat
 stow git
 stow karabiner
 stow kitty
+stow mise
 stow nvim
-stow rtx
 stow starship
 stow tmux
 stow zsh
@@ -25,5 +25,5 @@ stow zsh
 git submodule update --init --recursive
 
 # Install tools via rtx
-source <(rtx activate zsh)
-rtx install
+source <(mise activate zsh)
+mise install
