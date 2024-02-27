@@ -1,5 +1,5 @@
 [tools]
-golang = '1.20'
+golang = '1.22'
 java = 'adoptopenjdk-jre-20'
 node = 'lts'
 ruby = '3.2'
