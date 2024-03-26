@@ -14,11 +14,11 @@ brew bundle
 stow bat
 stow git
 stow karabiner
-stow kitty
 stow mise
 stow nvim
 stow starship
 stow tmux
+stow wezterm
 stow zsh
 
 # Update submodule
