@@ -43,10 +43,9 @@ return {
       },
       config = {
         header = vim.split(logo, "\n"),
-        -- stylua: ignore
         center = {
-          { action = "Lazy",              desc = " Lazy",        icon = "󰒲 ", key = "l" },
-          { action = "LazyExtras",        desc = " Lazy Extras", icon = " ", key = "x" },
+          { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
+          { action = "LazyExtras", desc = " Lazy Extras", icon = " ", key = "x" },
         },
         footer = function()
           local stats = require("lazy").stats()
