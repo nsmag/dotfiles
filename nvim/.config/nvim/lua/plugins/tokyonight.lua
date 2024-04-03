@@ -22,6 +22,13 @@ return {
           bg = c.bg_dark,
           fg = c.magenta,
         }
+        -- dashboard
+        hl.DashboardFooter = {
+          fg = c.yellow,
+        }
+        hl.DashboardKey = {
+          fg = c.magenta,
+        }
       end,
     },
   },

@@ -44,8 +44,30 @@ return {
       config = {
         header = vim.split(logo, "\n"),
         center = {
-          { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
-          { action = "LazyExtras", desc = " Lazy Extras", icon = " ", key = "x" },
+          {
+            action = "ene | startinsert",
+            desc = " New File",
+            icon = " ",
+            key = "n",
+          },
+          {
+            action = LazyVim.telescope("files"),
+            desc = " Find File",
+            icon = " ",
+            key = "f",
+          },
+          {
+            action = "Telescope oldfiles",
+            desc = " Recent Files",
+            icon = " ",
+            key = "r",
+          },
+          {
+            action = "Telescope live_grep",
+            desc = " Find Text",
+            icon = " ",
+            key = "g",
+          },
         },
         footer = function()
           local stats = require("lazy").stats()
