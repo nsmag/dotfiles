@@ -17,7 +17,8 @@ compinit
 bashcompinit
 
 ### PATH
-export PATH="$HOME/.pub-cache/bin:$PATH"
+export GEM_HOME="$HOME/.gem"
+export PATH="$GEM_HOME/bin:$PATH"
 
 ### zsh-autosuggestions
 if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
@@ -43,6 +44,7 @@ fi
 ### flutter
 if [ "$(command -v flutter)" ]; then
   source <(flutter bash-completion)
+  export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
 fi
 
 ### google-cloud-sdk
