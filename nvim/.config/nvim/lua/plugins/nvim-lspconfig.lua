@@ -6,6 +6,7 @@ return {
         timeout_ms = 2000,
       },
       servers = {
+        astro = {},
         cssls = {
           settings = {
             css = {
