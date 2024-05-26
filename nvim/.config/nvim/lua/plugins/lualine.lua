@@ -1,18 +1,5 @@
-local Util = require("lazyvim.util")
-
 return {
   "nvim-lualine/lualine.nvim",
-  event = "VeryLazy",
-  init = function()
-    vim.g.lualine_laststatus = vim.o.laststatus
-    if vim.fn.argc(-1) > 0 then
-      -- set an empty statusline till lualine loads
-      vim.o.statusline = " "
-    else
-      -- hide the statusline on the starter page
-      vim.o.laststatus = 0
-    end
-  end,
   opts = function()
     -- PERF: we don't need this lualine require madness 🤷
     local lualine_require = require("lualine_require")
@@ -44,7 +31,11 @@ return {
             icon = { "" },
           },
         },
+
         lualine_c = {
+          LazyVim.lualine.root_dir({
+            icon = "󰉋",
+          }),
           {
             "diagnostics",
             symbols = {
@@ -54,32 +45,31 @@ return {
               hint = icons.diagnostics.Hint,
             },
           },
-          { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
-          { Util.lualine.pretty_path() },
+          { LazyVim.lualine.pretty_path() },
         },
         lualine_x = {
-          -- stylua: ignore
-          {
-            function() return require("noice").api.status.command.get() end,
-            cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
-            color = Util.ui.fg("Statement"),
-          },
-          -- stylua: ignore
-          {
-            function() return require("noice").api.status.mode.get() end,
-            cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
-            color = Util.ui.fg("Constant"),
-          },
-          -- stylua: ignore
-          {
-            function() return "  " .. require("dap").status() end,
-            cond = function () return package.loaded["dap"] and require("dap").status() ~= "" end,
-            color = Util.ui.fg("Debug"),
-          },
+        -- stylua: ignore
+        {
+          function() return require("noice").api.status.command.get() end,
+          cond = function() return package.loaded["noice"] and require("noice").api.status.command.has() end,
+          color = LazyVim.ui.fg("Statement"),
+        },
+        -- stylua: ignore
+        {
+          function() return require("noice").api.status.mode.get() end,
+          cond = function() return package.loaded["noice"] and require("noice").api.status.mode.has() end,
+          color = LazyVim.ui.fg("Constant"),
+        },
+        -- stylua: ignore
+        {
+          function() return "  " .. require("dap").status() end,
+          cond = function () return package.loaded["dap"] and require("dap").status() ~= "" end,
+          color = LazyVim.ui.fg("Debug"),
+        },
           {
             require("lazy.status").updates,
             cond = require("lazy.status").has_updates,
-            color = Util.ui.fg("Special"),
+            color = LazyVim.ui.fg("Special"),
           },
           {
             "diff",
@@ -88,14 +78,20 @@ return {
               modified = icons.git.modified,
               removed = icons.git.removed,
             },
+            source = function()
+              local gitsigns = vim.b.gitsigns_status_dict
+              if gitsigns then
+                return {
+                  added = gitsigns.added,
+                  modified = gitsigns.changed,
+                  removed = gitsigns.removed,
+                }
+              end
+            end,
           },
         },
-        lualine_y = {
-          { "progress" },
-        },
-        lualine_z = {
-          { "location" },
-        },
+        lualine_y = { "progress" },
+        lualine_z = { "location" },
       },
       extensions = { "neo-tree", "lazy" },
     }

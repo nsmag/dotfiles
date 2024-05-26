@@ -1,19 +1,6 @@
-local function map(mode, lhs, rhs, opts)
-  local keys = require("lazy.core.handler").handlers.keys
-  ---@cast keys LazyKeysHandler
-  -- do not create the keymap if a lazy keys handler exists
-  if not keys.active[keys.parse({ lhs, mode = mode }).id] then
-    vim.keymap.set(mode, lhs, rhs, opts)
-  end
-end
+local map = vim.keymap.set
 
--- Unmap some default keys
-map("n", "<leader>gg", "<nop>")
-map("n", "<leader>gG", "<nop>")
-map("n", "<leader>ft", "<nop>")
-map("n", "<leader>fT", "<nop>")
-
--- Easy exit insert mode
+-- "jk" to escape from insert mode
 map("i", "jk", "<esc>")
 
 -- Move in insert mode
@@ -27,5 +14,3 @@ map("n", "<c-h>", "<cmd>NvimTmuxNavigateLeft<cr>")
 map("n", "<c-j>", "<cmd>NvimTmuxNavigateDown<cr>")
 map("n", "<c-k>", "<cmd>NvimTmuxNavigateUp<cr>")
 map("n", "<c-l>", "<cmd>NvimTmuxNavigateRight<cr>")
-map("n", "<c-\\>", "<cmd>NvimTmuxNavigateLastActive<cr>")
-map("n", "<c-space>", "<cmd>NvimTmuxNavigateNext<cr>")
