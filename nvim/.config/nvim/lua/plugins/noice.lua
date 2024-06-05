@@ -14,5 +14,10 @@ return {
         cmdline = { icon = "" },
       },
     },
+    lsp = {
+      hover = {
+        silent = true,
+      },
+    },
   },
 }
