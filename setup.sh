@@ -24,6 +24,6 @@ stow zsh
 # Update submodule
 git submodule update --init --recursive
 
-# Install tools via rtx
+# Install tools via mise
 source <(mise activate zsh)
 mise install
