@@ -1,6 +1,6 @@
 [tools]
-golang = '1.22'
+golang = 'latest'
 java = 'adoptopenjdk-jre-20'
 node = 'lts'
-ruby = '3.2'
+ruby = 'latest'
 rust = 'stable'
