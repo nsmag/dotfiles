@@ -18,7 +18,7 @@ bashcompinit
 
 ### PATH
 export GEM_HOME="$HOME/.gem"
-export PATH="$GEM_HOME/bin:$PATH"
+export PATH="$HOME/.pub-cache/bin:$GEM_HOME/bin:$PATH"
 
 ### zsh-autosuggestions
 if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
