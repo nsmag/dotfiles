@@ -1,6 +1,6 @@
 [tools]
 golang = 'latest'
-java = 'adoptopenjdk-jre-20'
+java = 'temurin-21'
 node = 'lts'
 ruby = 'latest'
 rust = 'stable'
