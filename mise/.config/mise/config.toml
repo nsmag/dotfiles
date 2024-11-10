@@ -1,6 +1,7 @@
 [tools]
+bundler = 'latest'
+cocoapods = 'latest'
 golang = 'latest'
 java = 'temurin-21'
 node = 'lts'
 ruby = 'latest'
-rust = 'stable'
