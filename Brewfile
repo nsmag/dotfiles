@@ -5,6 +5,7 @@ brew "mas"
 
 # Fonts
 cask "font-hack-nerd-font"
+cask "font-commit-mono-nerd-font"
 
 # Tools
 brew "bat"
