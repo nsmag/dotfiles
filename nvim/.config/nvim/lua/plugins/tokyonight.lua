@@ -3,28 +3,35 @@ return {
   opts = {
     style = "night",
     on_highlights = function(hl, c)
-      -- noice
-      hl.NoiceCmdlineIcon = {
-        fg = c.magenta,
-      }
-      -- telescope
-      hl.TelescopeBorder = {
-        bg = c.bg_dark,
-        fg = c.magenta,
-      }
-      hl.TelescopePromptBorder = {
-        bg = c.bg_dark,
-        fg = c.magenta,
-      }
-      hl.TelescopePromptTitle = {
-        bg = c.bg_dark,
-        fg = c.magenta,
-      }
       -- dashboard
       hl.DashboardFooter = {
         fg = c.yellow,
       }
       hl.DashboardKey = {
+        fg = c.magenta,
+      }
+      -- fzf
+      hl.FzfLuaBorder = {
+        fg = c.magenta,
+        bg = c.bg_float,
+      }
+      hl.FzfLuaFzfPointer = {
+        fg = c.magenta,
+      }
+      hl.FzfLuaFzfSeparator = {
+        fg = c.magenta,
+        bg = c.bg_float,
+      }
+      hl.FzfLuaPreviewTitle = {
+        fg = c.magenta,
+        bg = c.bg_float,
+      }
+      hl.FzfLuaTitle = {
+        fg = c.magenta,
+        bg = c.bg_float,
+      }
+      -- noice
+      hl.NoiceCmdlineIcon = {
         fg = c.magenta,
       }
     end,
