@@ -12,6 +12,7 @@ brew bundle
 
 # Stow
 stow bat
+stow ghostty
 stow git
 stow karabiner
 stow mise
