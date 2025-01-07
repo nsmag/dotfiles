@@ -3,7 +3,8 @@ theme = rose-pine
 font-family = ""
 font-family = CommitMono Nerd Font
 font-size = 12
-# font-thicken = true
+
+adjust-cell-width = -1
 
 copy-on-select = true
 macos-option-as-alt = true
