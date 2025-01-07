@@ -12,7 +12,7 @@
 [interactive]
 	diffFilter = delta --color-only
 [merge]
-	conflictstyle = diff3
+	conflictStyle = zdiff3
 [init]
 	defaultBranch = main
 [pull]
