@@ -9,6 +9,10 @@ return {
       left = "",
       right = "",
     }
+    opts.sections.lualine_b = { {
+      "branch",
+      icon = "",
+    } }
     opts.sections.lualine_y = { "progress" }
     opts.sections.lualine_z = { "location" }
   end,
