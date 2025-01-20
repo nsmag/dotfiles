@@ -4,7 +4,6 @@ tap "hashicorp/tap"
 brew "mas"
 
 # Fonts
-cask "font-hack-nerd-font"
 cask "font-commit-mono-nerd-font"
 
 # Tools
@@ -46,8 +45,6 @@ brew "zsh-autosuggestions"
 brew "zsh-syntax-highlighting"
 
 # Apps
-cask "arc"
-cask "brave-browser"
 cask "cloudflare-warp"
 cask "discord"
 cask "ghostty"
@@ -57,4 +54,3 @@ cask "karabiner-elements"
 cask "slack"
 cask "stats"
 cask "unnaturalscrollwheels"
-cask "wezterm"
