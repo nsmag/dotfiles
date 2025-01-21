@@ -18,8 +18,8 @@ stow karabiner
 stow mise
 stow nvim
 stow starship
+stow tabtab
 stow tmux
-stow wezterm
 stow zsh
 
 # Update submodule
