@@ -1,10 +1,9 @@
 return {
   "neovim/nvim-lspconfig",
   opts = {
-    servers = {
-      tailwindcss = {
-        filetypes_exclude = { "markdown" },
-        settings = {
+    setup = {
+      tailwindcss = function(_, opts)
+        opts.settings = {
           tailwindCSS = {
             experimental = {
               classRegex = {
@@ -19,8 +18,8 @@ return {
               },
             },
           },
-        },
-      },
+        }
+      end,
     },
   },
 }
