@@ -16,7 +16,14 @@ cursor-style = block
 cursor-style-blink = false
 cursor-color = e0def4
 
-window-padding-x = 12
-window-padding-y = 10
+window-padding-x = 8
+window-padding-y = 4
 window-padding-balance = true
-macos-titlebar-style = hidden
+macos-titlebar-style = tabs
+
+scrollback-limit = 1000000000
+
+keybind = super+shift+d=unbind
+keybind = super+d=unbind
+keybind = ctrl+s>-=new_split:down
+keybind = ctrl+s>|=new_split:right
