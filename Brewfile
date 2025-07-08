@@ -1,5 +1,4 @@
 # Taps & Installers
-tap "homebrew/cask-fonts"
 tap "hashicorp/tap"
 brew "mas"
 
@@ -29,7 +28,6 @@ brew "kustomize"
 brew "libyaml"
 brew "lima"
 brew "mise"
-brew "neofetch"
 brew "neovim"
 brew "openssl@3"
 brew "readline"
