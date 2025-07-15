@@ -48,6 +48,11 @@ if [ "$(command -v mise)" ]; then
   source <(mise completion zsh)
 fi
 
+### pnpm
+if [ "$(command -v pnpm)" ]; then
+  source <(pnpm completion zsh)
+fi
+
 ### flutter
 if [ "$(command -v flutter)" ]; then
   source <(flutter bash-completion)
@@ -69,10 +74,6 @@ fi
 if [ "$(command -v terraform)" ]; then
   complete -o nospace -C "$(brew --prefix)/bin/terraform" terraform
 fi
-
-### tabtab for these tools
-# - pnpm
-[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
 
 ### Aliases
 unalias -m "vi"
