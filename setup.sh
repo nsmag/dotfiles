@@ -14,9 +14,9 @@ brew bundle
 stow bat
 stow ghostty
 stow git
-stow karabiner
 stow mise
 stow nvim
+stow opencode
 stow starship
 stow tabtab
 stow tmux
