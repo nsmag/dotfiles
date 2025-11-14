@@ -1,7 +1,6 @@
 ---
 description: Review pull request from the current branch
 agent: review
-subtask: false
 ---
 
 Review pull request from the current branch.

@@ -4,19 +4,13 @@
   "share": "disabled",
   "permission": {
     "bash": {
-      "*": "allow",
-      "git commit": "ask",
-      "git push": "ask"
+      "*": "allow"
     }
   },
   "agent": {
     "plan": {
       "permission": {
-        "edit": "ask",
-        "bash": {
-          "git commit": "deny",
-          "git push": "deny"
-        }
+        "edit": "ask"
       }
     }
   },
