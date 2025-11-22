@@ -22,12 +22,3 @@ window-padding-balance = true
 macos-titlebar-style = tabs
 
 scrollback-limit = 1000000000
-
-keybind = super+shift+d=unbind
-keybind = super+d=unbind
-keybind = ctrl+s>-=new_split:down
-keybind = ctrl+s>\=new_split:right
-keybind = super+ctrl+h=goto_split:left
-keybind = super+ctrl+j=goto_split:down
-keybind = super+ctrl+k=goto_split:up
-keybind = super+ctrl+l=goto_split:right
