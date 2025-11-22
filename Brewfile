@@ -1,5 +1,4 @@
 # Taps & Installers
-tap "hashicorp/tap"
 brew "mas"
 
 # Fonts
@@ -23,7 +22,6 @@ brew "gmp"
 brew "gnupg"
 brew "jq"
 brew "kubernetes-cli"
-brew "kustomize"
 brew "libyaml"
 brew "lima"
 brew "mise"
@@ -34,7 +32,6 @@ brew "readline"
 brew "ripgrep"
 brew "starship"
 brew "stow"
-brew "hashicorp/tap/terraform"
 brew "tmux"
 brew "yq"
 brew "zsh"
