@@ -4,15 +4,15 @@
   "share": "disabled",
   "permission": {
     "bash": {
-      "*": "allow"
-    }
+      "*": "allow",
+    },
   },
   "agent": {
     "plan": {
       "permission": {
-        "edit": "ask"
-      }
-    }
+        "edit": "ask",
+      },
+    },
   },
   "keybinds": {
     "leader": "ctrl+x",
@@ -51,9 +51,9 @@
     "input_clear": "<leader>c",
     "input_forward_delete": "none",
     "input_paste": "none",
-    "input_submit": "enter",
-    "input_newline": "shift+enter,ctrl+j",
+    "input_submit": "return",
+    "input_newline": "shift+return",
     "history_previous": "up",
-    "history_next": "down"
-  }
+    "history_next": "down",
+  },
 }
