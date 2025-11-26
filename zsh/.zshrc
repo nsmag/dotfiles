@@ -56,7 +56,7 @@ fi
 ### flutter
 if [ "$(command -v flutter)" ]; then
   source <(flutter bash-completion)
-  export CHROME_EXECUTABLE="/Applications/Arc.app/Contents/MacOS/Arc"
+  export CHROME_EXECUTABLE="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 fi
 
 ### google-cloud-sdk
