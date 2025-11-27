@@ -1,5 +1,6 @@
 # Taps & Installers
 brew "mas"
+tap "sst/tap"
 
 # Fonts
 cask "font-commit-mono-nerd-font"
@@ -26,7 +27,7 @@ brew "libyaml"
 brew "lima"
 brew "mise"
 brew "neovim"
-brew "opencode"
+brew "sst/tap/opencode"
 brew "openssl@3"
 brew "readline"
 brew "ripgrep"
