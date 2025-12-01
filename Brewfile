@@ -8,6 +8,7 @@ cask "font-commit-mono-nerd-font"
 # Tools
 brew "bat"
 brew "bottom"
+brew "clang-format"
 brew "cmake"
 brew "coreutils"
 brew "docker"
