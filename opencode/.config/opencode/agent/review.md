@@ -1,6 +1,7 @@
 ---
 description: Review code for best practices and potential issues
 mode: subagent
+model: github-copilot/claude-sonnet-4.5
 tools:
   edit: false
   write: false
