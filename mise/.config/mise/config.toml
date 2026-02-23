@@ -1,7 +1,13 @@
 [tools]
-bundler = 'latest'
-cocoapods = 'latest'
+'gem:bundler' = 'latest'
+'gem:cocoapods' = 'latest'
 golang = 'latest'
 java = 'temurin-21'
 node = 'lts'
 ruby = 'latest'
+
+[settings]
+experimental = true
+
+[settings.ruby]
+compile = false
