@@ -1,6 +1,4 @@
 [tools]
-'gem:bundler' = 'latest'
-'gem:cocoapods' = 'latest'
 golang = 'latest'
 java = 'temurin-21'
 node = 'lts'
