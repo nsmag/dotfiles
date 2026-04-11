@@ -2,6 +2,7 @@
 golang = 'latest'
 java = 'temurin-21'
 node = 'lts'
+python = 'latest'
 ruby = 'latest'
 
 [settings]
