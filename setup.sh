@@ -17,6 +17,7 @@ stow git
 stow mise
 stow nvim
 stow opencode
+stow pi
 stow starship
 stow tabtab
 stow tmux

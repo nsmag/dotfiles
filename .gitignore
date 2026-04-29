@@ -1,5 +1,14 @@
 .DS_Store
 
+# pi credentials
+pi/.pi/agent/auth.json
+pi/.pi/agent/sessions/
+
+# extension dev deps
+pi/.pi/agent/extensions/node_modules/
+pi/.pi/agent/extensions/package-lock.json
+pi/.pi/agent/extensions/tsconfig.paths.json
+
 Brewfile*.lock.json
 
 *.zwc
