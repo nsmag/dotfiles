@@ -19,6 +19,7 @@ import {
 	matchesKey,
 	Text,
 	truncateToWidth,
+	wrapTextWithAnsi,
 } from "@mariozechner/pi-tui";
 import { Type } from "typebox";
 
@@ -302,6 +303,9 @@ export default function (pi: ExtensionAPI) {
 
 					const lines: string[] = [];
 					const add = (s: string) => lines.push(truncateToWidth(s, width));
+					const addWrapped = (s: string) => {
+						for (const line of wrapTextWithAnsi(s, width)) lines.push(line);
+					};
 
 					add(theme.fg("accent", "─".repeat(width)));
 
@@ -338,23 +342,42 @@ export default function (pi: ExtensionAPI) {
 							const opt = opts[i];
 							const selected = i === optionIndex;
 							const isOther = opt.isOther === true;
-							const prefix = selected ? theme.fg("accent", "> ") : "  ";
+							const prefix = selected ? "> " : "  ";
+							const numStr = `${i + 1}. `;
+							// Indent for continuation lines of the label (align past "> N. ")
+							const labelIndent = " ".repeat(prefix.length + numStr.length);
 							const color = selected ? "accent" : "text";
 
 							if (isOther && inputMode) {
-								add(prefix + theme.fg("accent", `${i + 1}. ${opt.label} ✎`));
+								add(
+									theme.fg("accent", prefix) +
+										theme.fg("accent", `${numStr}${opt.label} ✎`),
+								);
 							} else {
-								add(prefix + theme.fg(color, `${i + 1}. ${opt.label}`));
+								const labelLines = wrapTextWithAnsi(
+									theme.fg(color, `${numStr}${opt.label}`),
+									width - prefix.length,
+								);
+								for (let li = 0; li < labelLines.length; li++) {
+									const linePrefix = li === 0 ? theme.fg(color, prefix) : labelIndent;
+									lines.push(truncateToWidth(linePrefix + labelLines[li], width));
+								}
 							}
 							if (opt.description) {
-								add(`     ${theme.fg("muted", opt.description)}`);
+								// Indent descriptions to align under the label text
+								const descIndent = " ".repeat(prefix.length + numStr.length);
+								const descLines = wrapTextWithAnsi(
+									theme.fg("muted", opt.description),
+									width - descIndent.length,
+								);
+								for (const descLine of descLines) lines.push(descIndent + descLine);
 							}
 						}
 					}
 
 					if (inputMode && q) {
 						// Show question + options for reference, then the editor
-						add(theme.fg("text", ` ${q.prompt}`));
+						addWrapped(theme.fg("text", ` ${q.prompt}`));
 						lines.push("");
 						renderOptions();
 						lines.push("");
@@ -393,7 +416,7 @@ export default function (pi: ExtensionAPI) {
 						}
 					} else if (q) {
 						// Normal question tab
-						add(theme.fg("text", ` ${q.prompt}`));
+						addWrapped(theme.fg("text", ` ${q.prompt}`));
 						lines.push("");
 						renderOptions();
 					}
