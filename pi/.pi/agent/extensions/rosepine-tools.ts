@@ -31,7 +31,9 @@ import type { Component } from "@mariozechner/pi-tui";
 
 // ToolRenderContext is an internal type not exported from the public API.
 // Derive it structurally so the LSP is happy without depending on internals.
-type ToolRenderContext = Parameters<NonNullable<ToolDefinition<any, any>["renderCall"]>>[2];
+type ToolRenderContext = Parameters<
+  NonNullable<ToolDefinition<any, any>["renderCall"]>
+>[2];
 
 // ---------------------------------------------------------------------------
 // StripeWrapper
@@ -72,10 +74,10 @@ class StripeWrapper implements Component {
 
 /** Compute the coloured stripe prefix for the current render state. */
 function stripePrefix(context: ToolRenderContext, theme: Theme): string {
-  if (context.isPartial) return theme.fg("dim", "▎") + " ";
-  if (context.isError) return theme.fg("error", "▎") + " ";
+  if (context.isPartial) return " " + theme.fg("dim", "▎");
+  if (context.isError) return " " + theme.fg("error", "▎");
   // success — use pine via the thinkingLow token (= pine in rosepine theme)
-  return theme.fg("thinkingLow", "▎") + " ";
+  return " " + theme.fg("thinkingLow", "▎");
 }
 
 /**
@@ -91,8 +93,14 @@ function wrapCall(
   context: ToolRenderContext,
 ): Component {
   const prefix = stripePrefix(context, theme);
-  const prev = context.lastComponent instanceof StripeWrapper ? context.lastComponent : undefined;
-  const inner = origFn(args, theme, { ...context, lastComponent: prev?.innerComponent });
+  const prev =
+    context.lastComponent instanceof StripeWrapper
+      ? context.lastComponent
+      : undefined;
+  const inner = origFn(args, theme, {
+    ...context,
+    lastComponent: prev?.innerComponent,
+  });
   if (prev) {
     prev.innerComponent = inner;
     prev.setPrefix(prefix);
@@ -118,8 +126,14 @@ function wrapResult(
   context: ToolRenderContext,
 ): Component {
   const prefix = stripePrefix(context, theme);
-  const prev = context.lastComponent instanceof StripeWrapper ? context.lastComponent : undefined;
-  const inner = origFn(result, options, theme, { ...context, lastComponent: prev?.innerComponent });
+  const prev =
+    context.lastComponent instanceof StripeWrapper
+      ? context.lastComponent
+      : undefined;
+  const inner = origFn(result, options, theme, {
+    ...context,
+    lastComponent: prev?.innerComponent,
+  });
   if (prev) {
     prev.innerComponent = inner;
     prev.setPrefix(prefix);
@@ -150,8 +164,12 @@ function withStripe<TDetails>(
       : undefined,
 
     renderResult: origRenderResult
-      ? (result: any, options: ToolRenderResultOptions, theme: Theme, context: ToolRenderContext) =>
-          wrapResult(origRenderResult, result, options, theme, context)
+      ? (
+          result: any,
+          options: ToolRenderResultOptions,
+          theme: Theme,
+          context: ToolRenderContext,
+        ) => wrapResult(origRenderResult, result, options, theme, context)
       : undefined,
   };
 }
