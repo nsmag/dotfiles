@@ -11,16 +11,10 @@ if [ ! "$(command -v brew)" ]; then
 fi
 
 ### completion
-FPATH="$(brew --prefix)/share/zsh/site-functions:$FPATH"
+FPATH="$(brew --prefix)/share/zsh/site-functions${FPATH+:$FPATH}"
 autoload -Uz compinit bashcompinit
 compinit
 bashcompinit
-
-### PATH
-export GEM_HOME="$HOME/.gem"
-export PATH="$GEM_HOME/bin:$PATH"
-export PATH="$HOME/.pub-cache/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
 
 ### zsh-autosuggestions
 if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then

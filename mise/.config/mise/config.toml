@@ -6,6 +6,8 @@ python = 'latest'
 ruby = 'latest'
 
 [settings]
+idiomatic_version_file = true
+idiomatic_version_file_enable_tools = ["node"]
 experimental = true
 
 [settings.ruby]
