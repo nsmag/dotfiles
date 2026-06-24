@@ -17,7 +17,7 @@ import type {
   ToolDefinition,
   ToolRenderResultOptions,
   Theme,
-} from "@mariozechner/pi-coding-agent";
+} from "@earendil-works/pi-coding-agent";
 import {
   createBashToolDefinition,
   createEditToolDefinition,
@@ -26,8 +26,8 @@ import {
   createLsToolDefinition,
   createReadToolDefinition,
   createWriteToolDefinition,
-} from "@mariozechner/pi-coding-agent";
-import type { Component } from "@mariozechner/pi-tui";
+} from "@earendil-works/pi-coding-agent";
+import type { Component } from "@earendil-works/pi-tui";
 
 // ToolRenderContext is an internal type not exported from the public API.
 // Derive it structurally so the LSP is happy without depending on internals.
