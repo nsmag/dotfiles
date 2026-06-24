@@ -1,6 +1,5 @@
 # Taps & Installers
 brew "mas"
-tap "anomalyco/tap"
 
 # Fonts
 cask "font-commit-mono-nerd-font"
@@ -29,7 +28,6 @@ brew "libyaml"
 brew "lima"
 brew "mise"
 brew "neovim"
-brew "anomalyco/tap/opencode"
 brew "openssl@3"
 brew "readline"
 brew "ripgrep"
