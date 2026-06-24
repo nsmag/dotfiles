@@ -50,10 +50,10 @@ if [ "$(command -v pnpm)" ]; then
 fi
 
 ### flutter
-if [ "$(command -v flutter)" ]; then
-  source <(flutter bash-completion)
-  export CHROME_EXECUTABLE="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-fi
+# if [ "$(command -v flutter)" ]; then
+#   source <(flutter bash-completion)
+#   export CHROME_EXECUTABLE="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+# fi
 
 ### google-cloud-sdk
 if [ -d "$(brew --prefix)/share/google-cloud-sdk" ]; then
