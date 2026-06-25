@@ -14,6 +14,7 @@ brew bundle
 stow bat
 stow ghostty
 stow git
+stow lazygit
 stow mise
 stow nvim
 stow opencode

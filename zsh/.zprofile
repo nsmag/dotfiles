@@ -8,6 +8,7 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ### PATH
+export XDG_CONFIG_HOME="$HOME/.config"
 export GEM_HOME="$HOME/.gem"
 export PATH="$GEM_HOME/bin:${PATH+:$PATH}"
 export PATH="$HOME/.pub-cache/bin:${PATH+:$PATH}"
