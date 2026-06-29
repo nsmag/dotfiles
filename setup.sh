@@ -14,13 +14,13 @@ brew bundle
 stow bat
 stow ghostty
 stow git
+stow glances
 stow lazygit
 stow mise
 stow nvim
 stow opencode
 stow pi
 stow starship
-stow tabtab
 stow tmux
 stow zsh
 
