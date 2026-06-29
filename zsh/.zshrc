@@ -5,16 +5,11 @@ export LC_ALL="en_US.UTF-8"
 autoload colors
 colors
 
+### brew
 if [ ! "$(command -v brew)" ]; then
   echo "$fg[yellow][WARN]$fg[default] brew is not installed, the rest of the .zshrc will not be executed"
   return
 fi
-
-### completion
-FPATH="$(brew --prefix)/share/zsh/site-functions${FPATH+:$FPATH}"
-autoload -Uz compinit bashcompinit
-compinit
-bashcompinit
 
 ### zsh-autosuggestions
 if [ -f "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh" ]; then
@@ -41,34 +36,21 @@ fi
 ### mise
 if [ "$(command -v mise)" ]; then
   source <(mise activate zsh)
+fi
+
+### completion
+fpath=(~/.zsh/completion $(brew --prefix)/share/zsh/site-functions $fpath)
+autoload -Uz compinit bashcompinit
+compinit
+bashcompinit
+
+if [ "$(command -v mise)" ]; then
   source <(mise completion zsh)
 fi
 
 ### pnpm
-if [ "$(command -v pnpm)" ]; then
-  source <(pnpm completion zsh)
-fi
-
-### flutter
-# if [ "$(command -v flutter)" ]; then
-#   source <(flutter bash-completion)
-#   export CHROME_EXECUTABLE="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-# fi
-
-### google-cloud-sdk
-if [ -d "$(brew --prefix)/share/google-cloud-sdk" ]; then
-  source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-  source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-fi
-
-### azure-cli
-if [ -f "$(brew --prefix)/etc/bash_completion.d/az" ]; then
-  source "$(brew --prefix)/etc/bash_completion.d/az"
-fi
-
-### terraform
-if [ "$(command -v terraform)" ]; then
-  complete -o nospace -C "$(brew --prefix)/bin/terraform" terraform
+if [ "$(command -v corepack)" ]; then
+  corepack enable pnpm
 fi
 
 ### Aliases
@@ -91,9 +73,4 @@ fi
 if [ "$(command -v eza)" ]; then
   unalias -m "ls"
   alias ls='eza --icons -s type'
-fi
-
-if [ "$(command -v kubectl)" ]; then
-  unalias -m "k"
-  alias k='kubectl'
 fi
