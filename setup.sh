@@ -12,9 +12,9 @@ brew bundle
 
 # Stow
 stow bat
+stow btop
 stow ghostty
 stow git
-stow glances
 stow lazygit
 stow mise
 stow nvim
