@@ -7,6 +7,13 @@
 	navigate = true
 	side-by-side = true
 	syntax-theme = base16
+  line-numbers-minus-style = "#eb6f92"
+  line-numbers-plus-style = "#31748f"
+  line-numbers-zero-style = "#6e6a86"
+  minus-style = syntax "#2d222d"
+  minus-emph-style = syntax "#45283c"
+  plus-style = syntax "#1e2a30"
+  plus-emph-style = syntax "#253f44"
 [diff]
 	colorMoved = default
 [interactive]
