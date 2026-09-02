@@ -48,11 +48,6 @@ if [ "$(command -v mise)" ]; then
   source <(mise completion zsh)
 fi
 
-### pnpm
-if [ "$(command -v corepack)" ]; then
-  corepack enable pnpm
-fi
-
 ### Aliases
 unalias -m "vi"
 alias vi="$EDITOR"
