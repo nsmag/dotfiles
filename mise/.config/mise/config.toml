@@ -1,9 +1,9 @@
 [tools]
-golang = 'latest'
-java = 'temurin-21'
-node = 'lts'
-python = 'latest'
-ruby = 'latest'
+golang = "latest"
+java = "temurin-21"
+node = "lts"
+python = "latest"
+ruby = "latest"
 
 [settings]
 idiomatic_version_file = true
