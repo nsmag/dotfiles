@@ -10,6 +10,7 @@ ruby = "latest"
 idiomatic_version_file = true
 idiomatic_version_file_enable_tools = ["node"]
 experimental = true
+minimum_release_age_excludes = ["npm:@earendil-works/pi-coding-agent"]
 
 [settings.ruby]
 compile = false
