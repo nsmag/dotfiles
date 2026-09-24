@@ -8,7 +8,13 @@ Extensions:
 - `custom-footer.ts`
 - `questionnaire.ts`
 - `rosepine-tools.ts`
-- `rounded-editor.ts`
+
+## Machine-local extensions
+
+Put extensions that should only load on this machine in `../local-extensions/`.
+The agent's `settings.json` registers it as an extra resource path, while the
+standard `extensions/` directory continues to load normally. The local folder
+is gitignored.
 
 ## Setup on a new machine
 

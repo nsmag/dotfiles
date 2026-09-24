@@ -76,8 +76,7 @@ class StripeWrapper implements Component {
 function stripePrefix(context: ToolRenderContext, theme: Theme): string {
   if (context.isPartial) return " " + theme.fg("dim", "▎");
   if (context.isError) return " " + theme.fg("error", "▎");
-  // success — use pine via the thinkingLow token (= pine in rosepine theme)
-  return " " + theme.fg("thinkingLow", "▎");
+  return " " + theme.fg("success", "▎");
 }
 
 /**

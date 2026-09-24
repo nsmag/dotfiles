@@ -70,11 +70,11 @@
     "syntaxPunctuation": "subtle",
 
     "thinkingOff": "iris",
-    "thinkingMinimal": "subtle",
-    "thinkingLow": "pine",
-    "thinkingMedium": "foam",
+    "thinkingMinimal": "iris",
+    "thinkingLow": "iris",
+    "thinkingMedium": "iris",
     "thinkingHigh": "iris",
-    "thinkingXhigh": "love",
+    "thinkingXhigh": "iris",
 
     "bashMode": "gold"
   },

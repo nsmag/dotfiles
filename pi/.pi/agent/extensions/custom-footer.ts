@@ -19,6 +19,29 @@ function formatTokens(count: number): string {
   return `${Math.round(count / 1_000_000)}M`;
 }
 
+// Color only the footer label; the editor outline keeps its thinking* theme colors.
+function getThinkingLevelColor(
+  level: string,
+): "muted" | "syntaxKeyword" | "success" | "accent" | "error" | "warning" {
+  switch (level) {
+    case "off":
+    case "minimal":
+      return "muted";
+    case "low":
+      return "syntaxKeyword";
+    case "medium":
+      return "success";
+    case "high":
+      return "accent";
+    case "xhigh":
+      return "warning";
+    case "max":
+      return "error";
+    default:
+      return "muted";
+  }
+}
+
 export default function (pi: ExtensionAPI) {
   pi.on("session_start", (_event, ctx) => {
     ctx.ui.setFooter((tui, theme, footerData) => {
@@ -105,8 +128,14 @@ export default function (pi: ExtensionAPI) {
           // ── Right side: model + thinking level ───────────────────────
           const modelName = ctx.model?.id || "no-model";
           const thinkingLevel = pi.getThinkingLevel();
+          const thinkingLabel =
+            thinkingLevel === "off" ? "thinking off" : thinkingLevel;
+          const coloredThinkingLabel = theme.fg(
+            getThinkingLevelColor(thinkingLevel),
+            thinkingLabel,
+          );
           const rightSide = ctx.model?.reasoning
-            ? `${modelName} • ${thinkingLevel === "off" ? "thinking off" : thinkingLevel}`
+            ? `${modelName} • ${coloredThinkingLabel}`
             : modelName;
 
           // ── Layout ────────────────────────────────────────────────────
