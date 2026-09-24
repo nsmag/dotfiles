@@ -3,5 +3,5 @@ gui:
     selectedLineBgColor:
       - "#403d52"
 git:
-  pagers:
-    - pager: delta --paging=never
+  diffRenderers:
+    - command: delta --paging=never
