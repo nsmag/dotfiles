@@ -1,0 +1,41 @@
+pi/.pi/agent/themes/rosepine.json
+  s_33d3045b7df3d6::t_3ec9c7cb96ab75 73-75,77
+.gitignore
+  s_38c79de62d7613::t_3d238648f1a61c 7-9
+pi/.pi/agent/extensions/custom-footer.ts
+  s_33d3045b7df3d6::t_019ff89c0561b7 38-39
+  s_33d3045b7df3d6::t_90d6dc09102d6c 23-24
+  s_33d3045b7df3d6::t_f1183a321261bd 22,26-36,40-44,131-136,138
+  s_33d3045b7df3d6::t_0e1f9fa9aba053 37
+  s_33d3045b7df3d6::t_906ce7f762f6d7 25
+pi/.pi/agent/settings.json
+  s_38c79de62d7613::t_f44efa8ff0f3b5 1-5
+pi/.pi/agent/extensions/README.md
+  s_38c79de62d7613::t_dc3f60b47783b3 14-17
+  s_38c79de62d7613::t_e1d1cf834da6d1 12-13
+  s_38c79de62d7613::t_55ba9d29421aa4 11
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.3",
+  "base_commit_sha": "3941cf082569511733a300df98b91e468d255931",
+  "prompts": {},
+  "sessions": {
+    "s_33d3045b7df3d6": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0d22e-f3a3-7336-a8a6-dd3802276006",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "NATTHAKIT SUSANTHITANON <natthakit.sus@axonstech.com>"
+    },
+    "s_38c79de62d7613": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0d21c-e673-7405-870d-51790c8520b9",
+        "model": "gpt-6-luna"
+      },
+      "human_author": "NATTHAKIT SUSANTHITANON <natthakit.sus@axonstech.com>"
+    }
+  }
+}
