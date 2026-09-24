@@ -16,3 +16,8 @@ export PATH="$PNPM_HOME/bin:${PATH+:$PATH}"
 export PATH="$HOME/.pub-cache/bin:${PATH+:$PATH}"
 export PATH="$HOME/.local/bin:${PATH+:$PATH}"
 export PATH="$HOME/.local/share/mise/shims:${PATH+:$PATH}"
+
+### Local config
+if [[ -f ~/.zprofile.local ]]; then
+    source ~/.zprofile.local
+fi

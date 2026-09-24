@@ -69,3 +69,8 @@ if [ "$(command -v eza)" ]; then
   unalias -m "ls"
   alias ls='eza --icons -s type'
 fi
+
+### Local config
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi
