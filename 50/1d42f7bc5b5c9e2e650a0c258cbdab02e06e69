@@ -1,0 +1,16 @@
+zsh/.zprofile
+  h_4fa4993931467b 19-23
+zsh/.zshrc
+  h_4fa4993931467b 72-76
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.3",
+  "base_commit_sha": "501d42f7bc5b5c9e2e650a0c258cbdab02e06e69",
+  "prompts": {},
+  "humans": {
+    "h_4fa4993931467b": {
+      "author": "NATTHAKIT SUSANTHITANON <natthakit.sus@axonstech.com>"
+    }
+  }
+}
