@@ -1,0 +1,14 @@
+nvim/.config/nvim/lazyvim.json
+  h_4fa4993931467b 5,15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.3",
+  "base_commit_sha": "6ff0a513250dbe528f859182c2700c1ac5060e8c",
+  "prompts": {},
+  "humans": {
+    "h_4fa4993931467b": {
+      "author": "NATTHAKIT SUSANTHITANON <natthakit.sus@axonstech.com>"
+    }
+  }
+}
