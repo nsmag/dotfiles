@@ -1,0 +1,28 @@
+pi/.pi/agent/extensions/questionnaire/README.md
+  s_aaee334f9ff8c5::t_bbdecf7ac724ef 1-2,4-13,15-81
+  s_aaee334f9ff8c5::t_3b8f21e80d54e7 3,14
+pi/.pi/agent/extensions/questionnaire/test.mjs
+  s_aaee334f9ff8c5::t_ba9f96abd3fd3b 13-15
+  s_aaee334f9ff8c5::t_fd9a5bccb2fc5b 83,86
+  s_aaee334f9ff8c5::t_0094d398a6cd54 1-3,5-12,18-82,84-85,87-90,93-302
+  s_aaee334f9ff8c5::t_daeaa84afdf990 4,16-17,91-92
+pi/.pi/agent/extensions/questionnaire/index.ts
+  s_aaee334f9ff8c5::t_136ab82a803aff 1-24,26-308,311-331,333-341,343-371
+  s_aaee334f9ff8c5::t_66ddbc28259e25 25,309-310,332,342
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.3",
+  "base_commit_sha": "e83341b1e3b98ad7fbb90dab7c5fad15eeeb1244",
+  "prompts": {},
+  "sessions": {
+    "s_aaee334f9ff8c5": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "01a0fbb4-2fd2-747f-a560-cdbb4e62ffe7",
+        "model": "gpt-6.1-sol"
+      },
+      "human_author": "NATTHAKIT SUSANTHITANON <natthakit.sus@axonstech.com>"
+    }
+  }
+}
