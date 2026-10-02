@@ -15,7 +15,16 @@ return {
   { "folke/tokyonight.nvim", enabled = false },
   { "catppuccin/nvim", enabled = false },
   {
+    "akinsho/bufferline.nvim",
+    optional = true,
+    opts = function(_, opts)
+      if (vim.g.colors_name or ""):find("printemps") then
+        opts.highlights = require("printemps.bufferline").get()
+      end
+    end,
+  },
+  {
     "LazyVim/LazyVim",
-    opts = { colorscheme = "rose-pine" },
+    opts = { colorscheme = "printemps" },
   },
 }

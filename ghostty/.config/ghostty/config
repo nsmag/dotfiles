@@ -1,4 +1,4 @@
-theme = Rose Pine
+theme = printemps
 
 font-family = ""
 font-family = CommitMono Nerd Font
@@ -14,7 +14,6 @@ macos-option-as-alt = true
 shell-integration-features = no-cursor
 cursor-style = block
 cursor-style-blink = false
-cursor-color = e0def4
 
 window-padding-x = 8
 window-padding-y = 4

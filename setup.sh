@@ -23,6 +23,9 @@ stow starship
 stow tmux
 stow zsh
 
+# Register custom bat themes (delta reads them from bat's cache too)
+bat cache --build
+
 # Update submodule
 git submodule update --init --recursive
 

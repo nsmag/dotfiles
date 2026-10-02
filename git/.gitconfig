@@ -6,14 +6,14 @@
 [delta]
 	navigate = true
 	side-by-side = true
-	syntax-theme = base16
-  line-numbers-minus-style = "#eb6f92"
-  line-numbers-plus-style = "#31748f"
-  line-numbers-zero-style = "#6e6a86"
-  minus-style = syntax "#2d222d"
-  minus-emph-style = syntax "#45283c"
-  plus-style = syntax "#1e2a30"
-  plus-emph-style = syntax "#253f44"
+	syntax-theme = printemps
+  line-numbers-minus-style = "#d86e67"
+  line-numbers-plus-style = "#a2b477"
+  line-numbers-zero-style = "#7a6c60"
+  minus-style = syntax "#2b1a14"
+  minus-emph-style = syntax "#482822"
+  plus-style = syntax "#272317"
+  plus-emph-style = syntax "#3d3d28"
 [diff]
 	colorMoved = default
 [interactive]

@@ -1,7 +1,32 @@
 gui:
+  # Printemps, see themes/printemps/preview.html
   theme:
+    activeBorderColor:
+      - "#70a4d0"
+      - bold
+    inactiveBorderColor:
+      - "#7a6c60"
+    searchingActiveBorderColor:
+      - "#deb870"
+      - bold
+    optionsTextColor:
+      - "#70a4d0"
     selectedLineBgColor:
-      - "#403d52"
+      - "#3c3128"
+    inactiveViewSelectedLineBgColor:
+      - "#2b231b"
+    cherryPickedCommitFgColor:
+      - "#140e09"
+    cherryPickedCommitBgColor:
+      - "#83b7af"
+    markedBaseCommitFgColor:
+      - "#140e09"
+    markedBaseCommitBgColor:
+      - "#deb870"
+    unstagedChangesColor:
+      - "#d86e67"
+    defaultFgColor:
+      - default
 git:
   diffRenderers:
     - command: delta --paging=never

@@ -1,0 +1,101 @@
+# Printemps · after Claude Monet, Spring Flowers (1864)
+# Source palette: themes/printemps/preview.html
+
+# Main background, empty for terminal default, need to be empty if you want transparent background
+theme[main_bg]="#140e09"
+# base
+
+# Main text color
+theme[main_fg]="#e1d4d0"
+# text
+
+# Title color for boxes
+theme[title]="#e1d4d0"
+# text
+
+# Highlight color for keyboard shortcuts
+theme[hi_fg]="#db9657"
+# wallflower
+
+# Background color of selected item in processes box
+theme[selected_bg]="#3c3128"
+# hl_med
+
+# Foreground color of selected item in processes box
+theme[selected_fg]="#deb870"
+# ochre
+
+# Color of inactive/disabled text
+theme[inactive_fg]="#52453a"
+# hl_high
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#a7988d"
+# subtle
+
+# Background color of the percentage meters
+theme[meter_bg]="#3c3128"
+# hl_med
+
+# Misc colors for processes box including mini cpu graphs, details memory graph and details status text
+theme[proc_misc]="#83b7af"
+# sage
+
+# Box outline colors
+theme[cpu_box]="#70a4d0"
+# forgetmenot
+theme[mem_box]="#a2b477"
+# leaf
+theme[net_box]="#b299c6"
+# lilac
+theme[proc_box]="#d86e67"
+# geranium
+
+# Box divider line and small boxes line color
+theme[div_line]="#52453a"
+# hl_high
+
+# Temperature graph colors: sage → ochre → geranium
+theme[temp_start]="#83b7af"
+theme[temp_mid]="#deb870"
+theme[temp_end]="#d86e67"
+
+# CPU graph colors: leaf → ochre → geranium
+theme[cpu_start]="#a2b477"
+theme[cpu_mid]="#deb870"
+theme[cpu_end]="#d86e67"
+
+# Mem/Disk free meter: leaf → viburnum
+theme[free_start]="#a2b477"
+theme[free_mid]="#a2b477"
+theme[free_end]="#cbd3a7"
+
+# Mem/Disk cached meter: forgetmenot → sky
+theme[cached_start]="#70a4d0"
+theme[cached_mid]="#70a4d0"
+theme[cached_end]="#a1c6e6"
+
+# Mem/Disk available meter: ochre → pollen
+theme[available_start]="#deb870"
+theme[available_mid]="#deb870"
+theme[available_end]="#ead297"
+
+# Mem/Disk used meter: wallflower → geranium
+theme[used_start]="#db9657"
+theme[used_mid]="#d86e67"
+theme[used_end]="#d86e67"
+
+# Download graph colors: sage → mist
+theme[download_start]="#83b7af"
+theme[download_mid]="#83b7af"
+theme[download_end]="#b1d7d3"
+
+# Upload graph colors: lilac → hydrangea
+theme[upload_start]="#b299c6"
+theme[upload_mid]="#b299c6"
+theme[upload_end]="#e8b9c0"
+
+# Process box color gradient for threads, mem and cpu usage: leaf → ochre → geranium
+theme[process_start]="#a2b477"
+theme[process_mid]="#deb870"
+theme[process_end]="#d86e67"
