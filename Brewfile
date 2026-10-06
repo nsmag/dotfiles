@@ -43,4 +43,3 @@ brew "zsh-syntax-highlighting"
 # Apps
 cask "ghostty"
 cask "imageoptim"
-cask "mac-mouse-fix@2"
